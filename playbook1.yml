@@ -7,7 +7,7 @@
     yum: name=httpd state=present
   - name: start httpd
     service: name=httpd state=started
-  - name: deploy html file
+  - name: deploy html file server
     copy: src=index.html dest=/var/www/html
     notify: restart httpd
   handlers:
